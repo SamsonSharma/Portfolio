@@ -1,24 +1,28 @@
 <template>
-
-  <main class="maine">
-
      <div>   
-       
-       <div v-show="!mobile" class="desktop">
-         <header class="desktoptext">
-          <h1 class="desktopheader1">Hello, my name is Samson, also known as Snootnoot</h1>
-          <p class ="hobbies">I like to sit in my room all day and procastinate.</p>   
-         </header>
-       </div>
-
-    
-        
+        <ul v-show="!mobile" class="navbar">
+            <li>
+              <header>
+                <h1>
+                  {{ title }}
+                </h1>
+              </header>
+            </li>
+            <li>
+                <div class="button">
+                    <Button text="New" class="btn1"/>  
+                    <Button text="Best" class="btn2"/>
+                    <Button text="Old" class="btn3"/>
+                </div>
+            </li>
+            
+        </ul>
      <div v-show="mobile" class="mobilenavbar">
        
           <header class="mobileheader">
             <h1 class="mobiletext">
-                asdas
-            </h1>wwwwwwwwwwwwwwwww
+                {{ title }}
+            </h1>
           </header>
                            
         <ul class="footer"> 
@@ -31,17 +35,13 @@
               </li>
         </ul>
       </div>  
-    </div>  
-  </main>
-         
+      </div>         
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Button from './components/PFContent.vue'
+import Button from './PFContent.vue'
 export default {
     name: 'Header',
- 
     props:   {
         title: String,
     },
@@ -49,11 +49,10 @@ export default {
     {
         Button,
     },
-  
-        Header,  data()
+    data()
     {
       return{
-        mobile: false,
+        mobile: true,
         windowWidth: null,
       }
     }
@@ -61,10 +60,33 @@ export default {
 </script>
 //TODO: add phone switch support to top bar
 <style scoped>
-  
- 
+  header{
+    font-size: 1vw;
+    margin: 0px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: left;
+    
+  }
 
+   .navbar{
+    
+    position: -webkit-sticky;
+    position: sticky;
+    list-style-type: none;
+    background-color: rgb(39, 107, 59);
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    border: 0px;
+    padding:0px;
+    margin:0px;
+    top: 0;
+    left: 0;
 
+    }
 
   .mobileheader{
     position: -webkit-sticky;
@@ -80,52 +102,21 @@ export default {
     left: 0;
   }
 
-    .desktopheader4{
+    h1{
       
-      border: .5px solid wheat;
-      border-radius: 0px 0px 0px 0px;
-      padding: 5px; 
-      text-align: center;
+      border: .5px solid rgb(206, 205, 205);
+      border-radius: 0 14px 14px 14px;
+      padding: 5px;
       margin-left: 1vw;
-      
-      
     }
-
-    .desktopheader1{
-      padding-top: 100px;
-      width: 1920px;
-      text-align: center;
-      font-size: 2vmax;
-    }
-
-     .hobbies{
-      width: 1920px;
-      text-align: center;
-      font-size: 1.5vw;
-      }
-  
-
-    .desktoptext{
-      color:wheat;
-    }
-
-
 
     .mobiletext{
-     
+      border: .5px solid rgb(206, 205, 205);
+      border-radius: 0 0px 14px 0px;
+      background-color: rgb(39, 107, 59);
       font-size: 5vw;
-      
-    }
-
-    .desktop{
-      position: absolute;
-      top: 0%;
-      left: 50%;
-      padding-top: 100px;
-      transform: translate(-50%, -50%);
-      font-size: 100%;
-      text-align: left;
-      justify-content: center;
+      margin: 0px;
+      width: 45vw;
     }
   
    .button{
