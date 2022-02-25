@@ -9,6 +9,10 @@
           <h1 class="desktopheader1">Hello, my name is Samson, also known as Snootnoot</h1>
           <p class ="hobbies">I like to sit in my room all day and procastinate.</p>   
          </header>
+         <a href="https://github.com/Snootnoot" target="_blank" rel="noopener noreferrer">
+         <img src="./assets/github.png"
+         width="60" height="60">
+          </a>
        </div>
 
     
@@ -93,15 +97,16 @@ export default {
 
     .desktopheader1{
       padding-top: 100px;
-      width: 1920px;
+     
       text-align: center;
-      font-size: 2vmax;
+      font-size: vmax;
     }
 
      .hobbies{
-      width: 1920px;
+    
       text-align: center;
-      font-size: 1.5vw;
+      font-size: 1.3vmax;
+      padding-top: 5px;
       }
   
 
