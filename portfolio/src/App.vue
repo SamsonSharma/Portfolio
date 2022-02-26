@@ -80,8 +80,9 @@ export default {
   
   .bottext{
     color: wheat;
-    font-size: 1vw;
+    font-size: 1.3vmax;
     text-align: center;
+    padding-top: 10px;
   }
   .heads{
     padding: 0;
@@ -89,13 +90,13 @@ export default {
     text-decoration-color: #e6b566;
   }
   .icon{
-    transition: all .5s ease;
+    transition: all 1s ease;
     width: 4vmax;
     height: 4vmax;
     padding: 15px;   
   }
    .icon:hover{
-     transition: all .7s ease;
+     transition: all .3s ease;
     width: 4vmax;
     height: 4vmax;
     padding: 15px; 
@@ -150,6 +151,14 @@ export default {
       font-size: 2vmax;
       width: 100%;
     }
+    .desktopheader1:before {
+    position: absolute;
+    left: 15.8vmax;
+    width: 6.5vmax;
+    content: '';
+    top: 3.5vmax;
+    border-bottom: 2px solid #a3ddcb;
+}
 
     .desktopheader2{
       border: 5px dotted;
@@ -158,7 +167,7 @@ export default {
       display: inline; 
       text-align: center;
       border-color: #e5707e;
-      margin-left: 14.5vw;
+      margin-left: 12.5vw;
 
     }
 
@@ -166,7 +175,7 @@ export default {
     
       text-align: center;
       font-size: 1.2vmax;
-      padding-top: 5px;
+      padding-top: 2vmax;
       }
   
 
