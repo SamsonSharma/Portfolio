@@ -6,13 +6,25 @@
        
        <div v-show="!mobile" class="desktop">
          <header class="desktoptext">
-          <h1 class="desktopheader1">Hello, my name is Samson, also known as Snootnoot</h1>
+          <h1 class="desktopheader1">Hello, my name is Samson, also known as </h1>
+          <h1 class="desktopheader2">Snootnoot</h1>
           <p class ="hobbies">I like to sit in my room all day and procastinate.</p>   
          </header>
+         <div class="iconz">
          <a href="https://github.com/Snootnoot" target="_blank" rel="noopener noreferrer">
-         <img src="./assets/github.png"
-         width="60" height="60">
+         <img class="icon" src="./assets/github.png">
           </a>
+          <a href="https://insertdevname.itch.io/" target="_blank" rel="noopener noreferrer">
+         <img class="icon" src="./assets/itch.png">
+          </a>
+          <a href="https://www.youtube.com/channel/UCIVusMqdNHxLKt9LFySguFQ" target="_blank" rel="noopener noreferrer">
+         <img class="icon" src="./assets/yt.png">
+          </a>
+         </div>
+         <header class="bottext">
+         <p class="para">Currently working on:</p>
+         <h1 class="heads">Nothing.</h1>
+         </header>
        </div>
 
     
@@ -66,8 +78,45 @@ export default {
 //TODO: add phone switch support to top bar
 <style scoped>
   
- 
+  .bottext{
+    color: wheat;
+    font-size: 1vw;
+    text-align: center;
+  }
+  .heads{
+    padding: 0;
+    text-decoration: underline;
+    text-decoration-color: #e6b566;
+  }
+  .icon{
+    transition: all .5s ease;
+    width: 4vmax;
+    height: 4vmax;
+    padding: 15px;   
+  }
+   .icon:hover{
+     transition: all .7s ease;
+    width: 4vmax;
+    height: 4vmax;
+    padding: 15px; 
+    opacity: 50%;  
+  }
 
+  .iconz{
+    width: 4vmax;
+    height: 4vmax;
+    padding: 1vw; 
+    position: absolute;
+    display: flex;
+    left: 15vw;
+    position: absolute;
+      top: 110%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 100%;
+      text-align: left;
+      justify-content: center;
+  }
 
 
   .mobileheader{
@@ -95,23 +144,35 @@ export default {
       
     }
 
-    .desktopheader1{
-      padding-top: 100px;
-     
+    .desktopheader1, .desktopheader2{
+      
       text-align: center;
-      font-size: vmax;
+      font-size: 2vmax;
+      width: 100%;
+    }
+
+    .desktopheader2{
+      border: 5px dotted;
+      padding-left: 10px;
+      padding-right: 10px;
+      display: inline; 
+      text-align: center;
+      border-color: #e5707e;
+      margin-left: 14.5vw;
+
     }
 
      .hobbies{
     
       text-align: center;
-      font-size: 1.3vmax;
+      font-size: 1.2vmax;
       padding-top: 5px;
       }
   
 
     .desktoptext{
       color:wheat;
+      
     }
 
 
@@ -124,9 +185,9 @@ export default {
 
     .desktop{
       position: absolute;
-      top: 0%;
+      top: 40%;
       left: 50%;
-      padding-top: 100px;
+     
       transform: translate(-50%, -50%);
       font-size: 100%;
       text-align: left;
